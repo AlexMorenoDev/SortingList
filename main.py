@@ -7,16 +7,12 @@ def swap_elements(array, pos1, pos2):
     array[pos1], array[pos2] = array[pos2], array[pos1]
 
 def insertion_sort(array, method):
-    i = 1
-    while i < len(array):
+    for i in range(len(array)):
         key = array[i]
-        j = 0
-        while j < i:
+        for j in range(i):
             if (method and array[j] > key) or (not method and array[j] < key):
                 key = array[j]
                 swap_elements(array, i, j)
-            j += 1
-        i += 1
 
 # https://stackoverflow.com/questions/18262306/quicksort-with-python
 def quicksort(array, method):
